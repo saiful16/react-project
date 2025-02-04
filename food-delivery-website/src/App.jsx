@@ -1,9 +1,10 @@
 import React from "react";
+import Home from "./assets/pages/home";
 
 function App() {
   return (
-    <div className="text-red-500">
-      hiii
+    <div className="">
+      <Home/>
     </div>
   )
 }
