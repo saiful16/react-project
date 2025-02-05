@@ -1,6 +1,8 @@
 import React from "react";
 import Nav from "../components/Nav";
-import Categories from "../../categories";
+import Categories from "../Categories";
+import Card from "../components/Card";
+import {food_item} from "../food";
 
 function Home() {
   return (
@@ -16,9 +18,20 @@ function Home() {
             {item.name}
           </div>
         }
-
         )}
       </div>
+
+      {/* <div>
+        <Card />
+      </div> */}
+      
+      
+      <div className="flex flex-wrap container justify-center mx-auto mt-12 gap-3">
+        {food_item.map((item) => (
+          <Card name={item.food_name} image={item.food_image} price={item.price } id={item.id} type={item.food_type} />
+        ))}
+      </div>
+
     </div>
   )
 }
